@@ -20,8 +20,6 @@ Für Windows können die Binärdateien wie bei MacOS von der offiziellen Website
 ## Übung
 Es besteht die Möglichkeit auf github.io ein webbasiertes [Tutorial](https://try.github.io/levels/1/challenges/1) zu Thema git zu absolvieren. Alternativ dazu gibt es ein [Tutorial](https://git-scm.com/docs/gittutorial) auf [git-scm.com](https://git-scm.com).
 
-https://git-scm.com/docs/gittutorial
-
 ## Repository klonen
 Um ein Repository zu klonen finden Sie auf jeder Projektseite einen HTTPS und SSH Link. Den Download des Projekts mit SSH können Sie insofern durchführen, wenn Sie einen GitHub-Account haben und einen SSH-Public-Key in Ihren [Profileinstellungen](https://github.com/settings/keys) ihres Accounts hinterlegt haben. Durch den SSH-Key werden Sie beim Authentifizieren gegenüber der Seite [github.com](github.com) nicht nach ihrem Benutzernamen und ihrem Passwort gefragt.
 
