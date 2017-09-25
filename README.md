@@ -62,3 +62,12 @@ Während des Studiums werden Sie folgende Programmier- und Scriptspachen kennen 
 
 Neben diesen Programmiersprachen ist git in der Entwicklungsumgebung [IDE Intellij](https://www.jetbrains.com/idea/) integriert. Studenten erhalten über Nachweis ihres Studentenausweises eine Ultimate Version.
 
+## Troubleshooting
+
+### Please tell me, who you are?
+Sollte git eine Errormeldung werfen mit dem Titel `Please tell me, who you are?` fehlt git der Benutzername und die E-Mail Adresse. Diese Information kann für alle Projekte global gesetzt werden mit folgenden Befehlen.
+
+```bash
+git config --global user.name "DEIN NAME"
+git config --global user.email "DEINE EMAIL-ADRESSE"
+```
