@@ -41,6 +41,10 @@ Wenn Sie nicht schon die gängigen git Befehle beherrschen, lernen Sie diese in 
 
 Falls Sie die englische online Dokumentation stört und Sie nicht damit zurecht kommen, geht das Buch Git von Valentin Haenel und Julius Plenz auf den professionellen Umgang mit git ein - ISBN 978-3-95539-119-5.
 
+## Videos
+* Einrichten des repositories mit fh-trier als Downstream - [klick](./video/git_-_setup_upstream.mp4).
+* Das lokale repository aktualisieren und Konflikte mit meld als mergetool beheben - [klick](git_-_rebase_and_merge_with_meld.mp4)
+
 ## Warum als git repository?
 Dies dient als gute Grundlage den Studenten git als auch die Auszeichnugssprache [Markdown](https://guides.github.com/features/mastering-markdown/) näher zu bringen. Das Programm git kann als Revisionssystem übergreifend auch für andere Fächer wie beispielsweise Programmierung dienen und ermöglicht die Zusammenarbeit mit anderen Kommilitoten und Entwicklern weltweit.
 Es ist zu empfehlen einen eigenen Account auf [github.com](https://github.com) zu erstellen, Projekte des Benutzers [FH-Trier](https://github.com/fh-trier) zu forken und seine eigenen Lösungen zu veröffentlichen. Verbesserungen von Projekten des Benutzers FH-Trier kann gerne per Merge-Request gestellt werden. Der Github-Account kann in späteren Bewerbungunterlagen als online Referenz angegeben werden um Unternehmen direkt vermitteln zu können, welche Kentnisse vorhanden sind. Dies sollte Sie von anderen Mitbewerbern hervorheben.
@@ -62,3 +66,12 @@ Während des Studiums werden Sie folgende Programmier- und Scriptspachen kennen 
 
 Neben diesen Programmiersprachen ist git in der Entwicklungsumgebung [IDE Intellij](https://www.jetbrains.com/idea/) integriert. Studenten erhalten über Nachweis ihres Studentenausweises eine Ultimate Version.
 
+## Troubleshooting
+
+### Please tell me, who you are?
+Sollte git eine Errormeldung werfen mit dem Titel `Please tell me, who you are?` fehlt git der Benutzername und die E-Mail Adresse. Diese Information kann für alle Projekte global gesetzt werden mit folgenden Befehlen.
+
+```bash
+git config --global user.name "DEIN NAME"
+git config --global user.email "DEINE EMAIL-ADRESSE"
+```
