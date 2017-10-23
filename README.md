@@ -66,12 +66,47 @@ Während des Studiums werden Sie folgende Programmier- und Scriptspachen kennen 
 
 Neben diesen Programmiersprachen ist git in der Entwicklungsumgebung [IDE Intellij](https://www.jetbrains.com/idea/) integriert. Studenten erhalten über Nachweis ihres Studentenausweises eine Ultimate Version.
 
-## Troubleshooting
+## Merge und Diff
+Um einen Mergekonflikt oder ein diff per grafischen Oberfläche zu lösen oder zu betrachten empfiehlt sich das Programm [Meld](http://meldmerge.org/). Das Programm kann über die offizielle Seite für Windows Systeme [herunter geladen](https://download.gnome.org/binaries/win32/meld/3.16/Meld-3.16.2-win32.msi) werden. Bei Debian basierenden Systemen kann meld über offiziellen Paketquellen bezogen werden. Für Mac steht eine [Installationsanleitung](https://yousseb.github.io/meld/) auf github.io [bereit](https://yousseb.github.io/meld/).
 
-### Please tell me, who you are?
-Sollte git eine Errormeldung werfen mit dem Titel `Please tell me, who you are?` fehlt git der Benutzername und die E-Mail Adresse. Diese Information kann für alle Projekte global gesetzt werden mit folgenden Befehlen.
+Um allerdings git mitzuteilen, dass meld als Merge- bzw Difftool genutzt werden soll, sind einige Einstellungen notwendig.
 
 ```bash
-git config --global user.name "DEIN NAME"
-git config --global user.email "DEINE EMAIL-ADRESSE"
+# Für Debian, Mac, Ubuntu und Windows
+git config --global user.name "Markus Pesch" # Ersetze den Namen
+git config --global user.email "peschm@fh-trier.de" # Ersetze die E-Mail
+
+git config --global diff.tool meld # Meld als Standard difftool einstellen
+git config --global merge.tool meld # Meld als Standard mergetool einstellen
+
+# Für Windows
+# Den Programmpfad ggfs. anpassen
+git config --global mergetool.meld.path="C:\Program Files (x86)\Meld\Meld.exe"
+
+# Für Mac
+cat << EOF >> ~/.gitconfig
+	[diff]
+  		tool = meld
+	[difftool]
+  		prompt = yes
+	[difftool "meld"]
+  		trustExitCode = true
+  		cmd = open -W -a Meld --args \"$LOCAL\" \"$PWD/$REMOTE\"
+	[merge]
+  		tool = meld
+	[mergetool]
+  		prompt = yes
+	[mergetool "meld"]
+  		trustExitCode = true
+  		cmd = open -W -a Meld --args --auto-merge \"$PWD/$LOCAL\" \"$PWD/$BASE\" \"$PWD/$REMOTE\" --output=\"$PWD/$MERGED\"
+EOF
+
+# Für Debian, Mac, Ubuntu und Windows
+git config --global --list # Ausgabe der aktuellen git Einstellungen
+git config --global --edit # Bearbeiten der aktuellen git Einstellungen
+
 ```
+
+
+
+
