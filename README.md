@@ -81,7 +81,7 @@ git config --global merge.tool meld # Meld als Standard mergetool einstellen
 
 # Für Windows
 # Den Programmpfad ggfs. anpassen
-git config --global mergetool.meld.path="C:\Program Files (x86)\Meld\Meld.exe"
+git config --global mergetool.meld.path"C:\Program Files (x86)\Meld\Meld.exe"
 
 # Für Mac
 cat << EOF >> ~/.gitconfig
